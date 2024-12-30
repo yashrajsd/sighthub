@@ -22,14 +22,14 @@ body {
 
 @font-face {
   font-family: 'Aeonik';
-  src: url('../fonts/Aeonik-Regular.woff2') format('woff2');
+  src: url("./../../public/fonts/AeonikTRIAL-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Aeonik';
-  src: url('../components/global/fonts/AeonikTRIAL-Bold.otf') format('opentype');
+  src: url('./../../public/fonts/AeonikTRIAL-Bold.otf');
   font-weight: bold;
   font-style: normal;
 }
