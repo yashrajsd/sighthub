@@ -11,6 +11,7 @@ const Layout = ({children}: Props) => {
         {/* sidebar */}
         <SideBar/>
         {/* main */}
+        {children}
     </div>
   )
 }
