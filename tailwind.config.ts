@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        aeonik: ['Aeonik', 'Arial', 'sans-serif'], // Fallbacks included
+      },
     },
   },
   plugins: [],
