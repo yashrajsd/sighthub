@@ -16,8 +16,8 @@ const TopicBar = (props: Props) => {
             </p>
         </span>
         <span>
-            <button className='flex items-center text-[0.8rem] gap-2 bg-[#483FFF] p-2 px-4 rounded-md'>
-                <Share size={18}/> Share
+            <button className='flex items-center text-[0.8rem] gap-2 bg-white text-black fbg-[#483FFF] p-2 px-4 rounded-md'>
+                <Share size={18} color='#000000'/> Share
             </button>
         </span>
     </div>
