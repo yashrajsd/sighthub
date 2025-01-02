@@ -1,12 +1,20 @@
 import { SECTION_TYPES } from '@/constants/components'
-import { Brain, ChartNoAxesCombined, EqualApproximately } from 'lucide-react'
 import React from 'react'
+import CreateSection from '../create-section'
 
 type Props = {
     setSectionType: React.Dispatch<React.SetStateAction<string>>
+    setCreateSection: React.Dispatch<React.SetStateAction<React.ReactNode[]>>
 }
 
-const ComponentPopup = ({ setSectionType }: Props) => {
+
+const ComponentPopup = ({ setSectionType ,setCreateSection}: Props) => {
+    
+    const handleCreation=(type:string)=>{
+        setSectionType(type)
+        setCreateSection((prevSections) => [...prevSections, <CreateSection sectionType={type} />]);
+    }
+
     return (
         <div className='absolute z-4'>
             <div className='bg-[#2A2A2F] shadow-xl font-aeonik rounded-lg py-4 px-6'>
@@ -16,7 +24,7 @@ const ComponentPopup = ({ setSectionType }: Props) => {
                             <li
                                 id={section.id}
                                 className='flex flex-col gap-1 transition duration-300 hover:bg-[#26262D] rounded-lg cursor-pointer p-3'
-                                onClick={() => setSectionType(section.type)}
+                                onClick={()=>handleCreation(section.type)}
                             >
                                 <p className='flex items-center gap-2'>
                                     {section.icon} {section.label}

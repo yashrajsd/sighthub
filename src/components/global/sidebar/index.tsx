@@ -10,7 +10,7 @@ type Props = {
 
 const SideBar = ({ slug }: Props) => {
     return (
-        <div className='hidden lg:block w-64 font-aeonik relative border-r-[#3F3F46] h-full flex flex-col justify-between border-r-[1px] '>
+        <div className='hidden lg:block fixed w-64 font-aeonik relative border-r-[#3F3F46] h-full flex flex-col justify-between border-r-[1px] '>
             <div className='flex flex-col p-4'>
                 <h3 className='font-bold '>Dashboard</h3>
                 <ul className='flex flex-col gap-3 py-[1rem] text-[0.9rem]'>
@@ -29,7 +29,7 @@ const SideBar = ({ slug }: Props) => {
                 </ul>
             </div>
             <div className='px-2 flex justify-center items-center'>
-                <hr className='w-[80%] border-[#3F3F46]' />
+                <hr className='w-[90%] border-[#3F3F46]' />
             </div>
             <div className='absolute bottom-0 flex-1 p-4 flex justify-center items-center'>
                 <SubscriptionCard />

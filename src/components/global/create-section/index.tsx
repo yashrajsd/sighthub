@@ -1,4 +1,6 @@
 import React from 'react'
+import InsightCreate from './components/insight';
+import GraphCreate from './components/graph';
 
 type Props = {
     sectionType: string
@@ -9,17 +11,17 @@ const CreateSection = ({ sectionType }: Props) => {
 
     switch (sectionType) {
         case 'insight':
-            content = <div>AI Insight Section</div>;
+            content = <InsightCreate/>
             break;
         case 'graph':
-            content = <div>Graph Section</div>;
+            content = <GraphCreate/>
             break;
         default:
             content = <div>Select a section type</div>;
     }
 
     return (
-        <div className='w-full px-8 py-4'>
+        <div className='w-full'>
             {content}
         </div>
     );
